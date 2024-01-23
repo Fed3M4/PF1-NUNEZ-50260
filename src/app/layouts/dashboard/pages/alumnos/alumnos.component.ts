@@ -9,8 +9,6 @@ const listaAlumnos: Alumnos[] = [
   {id: 3, firstName: 'Lucas', lastName: 'Nabarro', phone: 1165290665, email: 'lucas@gmail.com', password: 'juegosonline'}
 ];
 
-
-
 @Component({
   selector: 'app-alumnos',
   templateUrl: './alumnos.component.html',
@@ -24,23 +22,20 @@ export class AlumnosComponent {
     const nuevoAlumno = {...ev, id: listaAlumnos.length +1}
     if(nuevoAlumno) {
       listaAlumnos.push(nuevoAlumno)
+      this.actualizarTabla();
     }
-    // this.dataSource.data= [...listaAlumnos, {...ev, id: listaAlumnos.length + 1}]
-    // listaAlumnos.push(ev)
   }
-  // eliminarAlumnos(element: Alumnos): void{
-  //   const alumnoAEliminar = element.firstName
-  //   if(alumnoAEliminar) {
-  //     this.dataSource.data= listaAlumnos.filter((alumno) => alumno.firstName != alumnoAEliminar)
-  //   }
-  //   // const alumnoAEliminar = listaAlumnos.findIndex(obj => obj === element);
-  //   // if (alumnoAEliminar >= 0) {
-  //   //   this.dataSource.data = listaAlumnos.filter((alumnoAEliminar) => alumnoAEliminar.firstName != element.firstName)
-  //   //   console.log(listaAlumnos)
-  //     // listaAlumnos.splice(alumnoAEliminar, 1);
-  //     // this.dataSource.data = [...listaAlumnos]; 
-  //     // alumnoAEliminar = alumnoAEliminar.filter((nombreAlumno) => nombreAlumno.firstName != nombreEmpleadoAEliminar.firstName)
-  //   // }
-  // }
+  eliminarAlumnos(element: Alumnos): void{
+    const alumnoAEliminar = element.firstName
+    if (alumnoAEliminar) {
+      const index = listaAlumnos.findIndex(alumno => alumno.firstName === alumnoAEliminar);
+      if (index !== -1) {
+        listaAlumnos.splice(index, 1);
+        this.actualizarTabla();
+      }
+    }
+  }
+  private actualizarTabla(): void {
+    this.dataSource.data = [...listaAlumnos];
+  }
 }
-

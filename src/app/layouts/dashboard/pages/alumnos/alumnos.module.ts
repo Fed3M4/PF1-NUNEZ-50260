@@ -7,7 +7,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { AltaAlumnosModule } from './components/alta-alumnos/alta-alumnos.module';
 
 import { MatButtonModule } from '@angular/material/button';
-import { BajaAlumnosModule } from './components/baja-alumnos/baja-alumnos.module';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -21,7 +21,7 @@ import { BajaAlumnosModule } from './components/baja-alumnos/baja-alumnos.module
     MatFormFieldModule,
     AltaAlumnosModule,
     MatButtonModule,
-    BajaAlumnosModule
+    MatIconModule
   ],
   exports: [
     AlumnosComponent
