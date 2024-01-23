@@ -17,11 +17,13 @@ const listaAlumnos: Alumnos[] = [
 export class AlumnosComponent {
   displayedColumns: string[] = ['id', 'fullName', 'phone', 'email', 'delete'];
   dataSource = new MatTableDataSource<Alumnos>(listaAlumnos);
+  colorearTabla = false
 
   onUserSubmitted(ev: Alumnos): void {
     const nuevoAlumno = {...ev, id: listaAlumnos.length +1}
     if(nuevoAlumno) {
       listaAlumnos.push(nuevoAlumno)
+      this.colorearTabla = true
       this.actualizarTabla();
     }
   }
