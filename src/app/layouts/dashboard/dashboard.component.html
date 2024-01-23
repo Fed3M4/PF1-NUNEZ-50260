@@ -2,10 +2,10 @@
     <mat-drawer #drawer class="example-sidenav" mode="side">
       <nav class="nav flex-column">
         <a href="#" style="background-color: black;"><img src="../../../assets/logocoderpng.png" style="height: 65px;" alt=""></a>
-        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-        <a class="nav-link" href="#">Nosotros</a>
-        <a class="nav-link" href="#">Alumnos</a>
-        <a class="nav-link disabled" aria-disabled="true">Proximamente...</a>
+        <a appTitulosTamanio class="nav-link active" aria-current="page" href="#">Inicio</a>
+        <a appTitulosTamanio class="nav-link" href="#">Nosotros</a>
+        <a appTitulosTamanio class="nav-link" href="#">Alumnos</a>
+        <a appTitulosTamanio class="nav-link disabled" aria-disabled="true">Proximamente...</a>
       </nav>
     </mat-drawer>
   
@@ -17,7 +17,7 @@
         (click)="drawer.toggle()">
           <mat-icon>menu</mat-icon>
         </button>
-        <span>Proyecto Final - Lista de Alumnos</span>
+        <span appTitulosTamanio>Proyecto Final - Lista de Alumnos</span>
         <span class="example-spacer"></span>
         <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
           <mat-icon>favorite</mat-icon>
