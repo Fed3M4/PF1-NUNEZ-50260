@@ -9,7 +9,6 @@ import { AltaAlumnosModule } from './components/alta-alumnos/alta-alumnos.module
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
-
 @NgModule({
   declarations: [
     AlumnosComponent
