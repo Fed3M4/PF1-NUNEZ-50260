@@ -15,6 +15,5 @@ export class ColorearUltimoAgregadoDirective {
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit() {
-    // Puedes agregar lógica adicional aquí si es necesario al inicializar la directiva.
   }
 }
