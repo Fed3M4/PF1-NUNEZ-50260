@@ -1,6 +1,12 @@
 <mat-drawer-container class="example-container" autosize style="height: 100vh;">
     <mat-drawer #drawer class="example-sidenav" mode="side">
-      <p>Auto-resizing sidenav</p>
+      <nav class="nav flex-column">
+        <a href="#" style="background-color: black;"><img src="../../../assets/logocoderpng.png" style="height: 65px;" alt=""></a>
+        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        <a class="nav-link" href="#">Nosotros</a>
+        <a class="nav-link" href="#">Alumnos</a>
+        <a class="nav-link disabled" aria-disabled="true">Proximamente...</a>
+      </nav>
       @if (showFiller) {
         <p>Lorem, ipsum dolor sit amet consectetur.</p>
       }
