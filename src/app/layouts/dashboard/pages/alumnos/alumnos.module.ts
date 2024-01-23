@@ -1,0 +1,30 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { AlumnosComponent } from './alumnos.component';
+import {MatTableModule} from '@angular/material/table';
+import { SharedModule } from '../../../../shared/shared.module';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { AltaAlumnosModule } from './components/alta-alumnos/alta-alumnos.module';
+
+import { MatButtonModule } from '@angular/material/button';
+import { BajaAlumnosModule } from './components/baja-alumnos/baja-alumnos.module';
+
+
+@NgModule({
+  declarations: [
+    AlumnosComponent
+    ],
+  imports: [
+    CommonModule,
+    MatTableModule,
+    SharedModule,
+    MatFormFieldModule,
+    AltaAlumnosModule,
+    MatButtonModule,
+    BajaAlumnosModule
+  ],
+  exports: [
+    AlumnosComponent
+  ]
+})
+export class AlumnosModule { }
